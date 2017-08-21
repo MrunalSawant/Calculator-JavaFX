@@ -99,34 +99,67 @@ public class FXMLDocumentController implements Initializable {
       }else if(event.getSource()==clear){
           tf.setText("");
       }else if(event.getSource()==plus){
-          a = Double.parseDouble(tf.getText());
-          operator = 1 ;
-          tf.setText("");
+          try{
+              a = Double.parseDouble(tf.getText());
+              operator = 1 ;
+          }catch(NumberFormatException e){
+              System.out.println("Enter value First");
+          }finally{
+              tf.setText("");
+          }
+          
+          
       }else if(event.getSource()==minus){
-          a = Double.parseDouble(tf.getText());
-          operator = 2;
-          tf.setText("");
+          try{
+              a = Double.parseDouble(tf.getText());
+              operator = 2 ;
+          }catch(NumberFormatException e){
+              System.out.println("Enter value First");
+          }finally{
+              tf.setText("");
+          }
+          
       }else if(event.getSource()==mult){
-          a = Double.parseDouble(tf.getText());
-          operator = 3 ;
-          tf.setText("");
+          try{
+              a = Double.parseDouble(tf.getText());
+              operator = 3 ;
+          }catch(NumberFormatException e){
+              System.out.println("Enter value First");
+          }finally{
+              tf.setText("");
+          }
+          
       }else if(event.getSource()==division){
-          a = Double.parseDouble(tf.getText());
-          operator = 4 ;
-          tf.setText("");
+          try{
+              a = Double.parseDouble(tf.getText());
+              operator = 4 ;
+          }catch(NumberFormatException e){
+              System.out.println("Enter value First");
+          }finally{
+              tf.setText("");
+          }
+          
       }else if(event.getSource()==equals){
-          b = Double.parseDouble(tf.getText());
-          switch(operator){
-              case 1 : result = a + b ; break;
-              case 2 : result = a - b ; break;
-              case 3 : result = a * b ; break;
+          try{
+              b = Double.parseDouble(tf.getText());
+              
+              switch(operator){
+              case 1 : result = a + b ; tf.setText(""+result);  break;
+              case 2 : result = a - b ; tf.setText(""+result);  break;
+              case 3 : result = a * b ; tf.setText(""+result);  break;
               case 4 : try{
                         result = a/b ;
+                        tf.setText(""+result);
                       }catch(Exception e){
                           tf.setText("Error");
                       }
+            }
+                
+          
+          }catch(NumberFormatException e){
+              System.out.println("Select values First");
           }
-          tf.setText(""+result);
+          
       }
     }
     
