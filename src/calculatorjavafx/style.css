@@ -8,8 +8,8 @@ and open the template in the editor.
     Author     : mrunal
 */
 .button{
-    -fx-background-color: #fe5b5b;
-    -fx-border-color: #f43838;
+    -fx-background-color: #5d5d5d;
+    -fx-border-color: black;
 }
 
 .button:hover{
@@ -17,7 +17,9 @@ and open the template in the editor.
     -fx-text-fill: white ;
 }
 
-#tf{
+.textfield{
     -fx-background-color: #66b7dd;
+    
 }
+
 
