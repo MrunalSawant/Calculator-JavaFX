@@ -7,16 +7,18 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="454.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculatorjavafx.FXMLDocumentController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="454.0" style="-fx-background-color: black;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculatorjavafx.FXMLDocumentController">
    <children>
-      <TextField fx:id="tf" alignment="CENTER_RIGHT" editable="false" layoutX="11.0" layoutY="97.0" prefHeight="89.0" prefWidth="429.0">
+      <TextField fx:id="tf" alignment="CENTER_RIGHT" editable="false" layoutX="11.0" layoutY="97.0" prefHeight="89.0" prefWidth="432.0">
          <font>
             <Font size="43.0" />
          </font>
       </TextField>
-      <TextField fx:id="tf2" alignment="CENTER_RIGHT" editable="false" layoutX="18.0" layoutY="15.0" prefHeight="82.0" prefWidth="420.0">
+      <TextField fx:id="tf2" alignment="CENTER_RIGHT" editable="false" layoutX="11.0" layoutY="10.0" prefHeight="89.0" prefWidth="432.0">
          <font>
             <Font size="17.0" />
          </font>
@@ -39,81 +41,209 @@
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="three" layoutX="126.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="95.0" prefWidth="127.0" text="3" GridPane.columnIndex="2">
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="six" layoutX="242.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="95.0" prefWidth="127.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="five" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="95.0" prefWidth="127.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="four" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="95.0" prefWidth="127.0" text="4" GridPane.rowIndex="1">
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="seven" layoutX="10.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="95.0" prefWidth="127.0" text="7" GridPane.rowIndex="2">
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="eight" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="95.0" prefWidth="127.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="nine" layoutX="126.0" layoutY="178.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="95.0" prefWidth="127.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="equals" layoutX="242.0" layoutY="178.0" mnemonicParsing="false" onAction="#equals" prefHeight="95.0" prefWidth="114.0" text="=" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="zero" layoutX="242.0" layoutY="178.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="95.0" prefWidth="127.0" text="0" GridPane.rowIndex="3">
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="clear" layoutX="126.0" layoutY="262.0" mnemonicParsing="false" onAction="#clearText" prefHeight="95.0" prefWidth="127.0" text="CL" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="35.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="plus" layoutX="242.0" layoutY="262.0" mnemonicParsing="false" onAction="#add" prefHeight="96.0" prefWidth="125.0" text="+" GridPane.columnIndex="3">
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="division" layoutX="242.0" layoutY="262.0" mnemonicParsing="false" onAction="#divide" prefHeight="95.0" prefWidth="127.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="mult" layoutX="242.0" layoutY="262.0" mnemonicParsing="false" onAction="#multiply" prefHeight="95.0" prefWidth="127.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="minus" layoutX="242.0" layoutY="262.0" mnemonicParsing="false" onAction="#substract" prefHeight="95.0" prefWidth="127.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="#f2e9e994" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="one" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="95.0" prefWidth="127.0" text="1">
                <font>
                   <Font size="44.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#00000081" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
          </children>
          <padding>
