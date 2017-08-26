@@ -9,14 +9,19 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="454.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculatorjavafx.FXMLDocumentController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="454.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculatorjavafx.FXMLDocumentController">
    <children>
-      <TextField fx:id="tf" alignment="CENTER_RIGHT" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="84.0" prefWidth="429.0">
+      <TextField fx:id="tf" alignment="CENTER_RIGHT" editable="false" layoutX="11.0" layoutY="97.0" prefHeight="89.0" prefWidth="429.0">
          <font>
             <Font size="43.0" />
          </font>
       </TextField>
-      <GridPane layoutX="-1.0" layoutY="100.0" prefHeight="355.0" prefWidth="454.0">
+      <TextField fx:id="tf2" alignment="CENTER_RIGHT" editable="false" layoutX="18.0" layoutY="15.0" prefHeight="82.0" prefWidth="420.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <GridPane layoutX="-1.0" layoutY="182.0" prefHeight="366.0" prefWidth="454.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -70,7 +75,7 @@
                   <Font size="44.0" />
                </font>
             </Button>
-            <Button fx:id="equals" layoutX="242.0" layoutY="178.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="95.0" prefWidth="114.0" text="=" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="equals" layoutX="242.0" layoutY="178.0" mnemonicParsing="false" onAction="#equals" prefHeight="95.0" prefWidth="114.0" text="=" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="44.0" />
                </font>
@@ -80,27 +85,27 @@
                   <Font size="44.0" />
                </font>
             </Button>
-            <Button fx:id="clear" layoutX="126.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="95.0" prefWidth="127.0" text="CL" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button fx:id="clear" layoutX="126.0" layoutY="262.0" mnemonicParsing="false" onAction="#clearText" prefHeight="95.0" prefWidth="127.0" text="CL" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="35.0" />
                </font>
             </Button>
-            <Button fx:id="plus" layoutX="242.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="96.0" prefWidth="125.0" text="+" GridPane.columnIndex="3">
+            <Button fx:id="plus" layoutX="242.0" layoutY="262.0" mnemonicParsing="false" onAction="#add" prefHeight="96.0" prefWidth="125.0" text="+" GridPane.columnIndex="3">
                <font>
                   <Font size="44.0" />
                </font>
             </Button>
-            <Button fx:id="division" layoutX="242.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="95.0" prefWidth="127.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button fx:id="division" layoutX="242.0" layoutY="262.0" mnemonicParsing="false" onAction="#divide" prefHeight="95.0" prefWidth="127.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font size="44.0" />
                </font>
             </Button>
-            <Button fx:id="mult" layoutX="242.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="95.0" prefWidth="127.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button fx:id="mult" layoutX="242.0" layoutY="262.0" mnemonicParsing="false" onAction="#multiply" prefHeight="95.0" prefWidth="127.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font size="44.0" />
                </font>
             </Button>
-            <Button fx:id="minus" layoutX="242.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="95.0" prefWidth="127.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button fx:id="minus" layoutX="242.0" layoutY="262.0" mnemonicParsing="false" onAction="#substract" prefHeight="95.0" prefWidth="127.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font size="44.0" />
                </font>

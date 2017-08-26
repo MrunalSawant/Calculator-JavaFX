@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Labeled;
 import javafx.scene.control.TextField;
 
 /**
@@ -20,7 +21,7 @@ import javafx.scene.control.TextField;
 public class FXMLDocumentController implements Initializable {
     
     @FXML
-    private TextField tf ;
+    private TextField tf,tf2 ;
     
     @FXML
     private Button two;
@@ -72,75 +73,80 @@ public class FXMLDocumentController implements Initializable {
     
     private int operator ;
     double a,b,result ;
-    
+    String prevStr="";
     @FXML
     private void handleButtonAction(ActionEvent event) {
-       //tf.setText("Hello");
-      if(event.getSource()==one){
-          tf.setText(tf.getText()+"1");
-      }else if(event.getSource()==two){
-          tf.setText(tf.getText()+"2");
-      }else if(event.getSource()==three){
-          tf.setText(tf.getText()+"3");
-      }else if(event.getSource()==four){
-          tf.setText(tf.getText()+"4");
-      }else if(event.getSource()==five){
-          tf.setText(tf.getText()+"5");
-      }else if(event.getSource()==six){
-          tf.setText(tf.getText()+"6");
-      }else if(event.getSource()==seven){
-          tf.setText(tf.getText()+"7");
-      }else if(event.getSource()==eight){
-          tf.setText(tf.getText()+"8");
-      }else if(event.getSource()==nine){
-          tf.setText(tf.getText()+"9");
-      }else if(event.getSource()==zero){
-          tf.setText(tf.getText()+"0");
-      }else if(event.getSource()==clear){
-          tf.setText("");
-      }else if(event.getSource()==plus){
-          try{
+        String str = ((Labeled)event.getSource()).getText();
+        tf.setText(tf.getText()+str);
+        tf2.setText(prevStr+str);
+        prevStr = tf2.getText();
+    }
+    
+    @FXML
+    private void add(){
+        try{
               a = Double.parseDouble(tf.getText());
               operator = 1 ;
+              tf2.setText(prevStr+"+");
+              prevStr = tf2.getText();
           }catch(NumberFormatException e){
               System.out.println("Enter value First");
           }finally{
               tf.setText("");
           }
-          
-          
-      }else if(event.getSource()==minus){
+    }
+    
+    @FXML
+    private void substract(){
           try{
               a = Double.parseDouble(tf.getText());
               operator = 2 ;
+              tf2.setText(prevStr+"-");
+              prevStr = tf2.getText();
           }catch(NumberFormatException e){
               System.out.println("Enter value First");
           }finally{
               tf.setText("");
           }
-          
-      }else if(event.getSource()==mult){
-          try{
-              a = Double.parseDouble(tf.getText());
-              operator = 3 ;
+    }
+    
+    @FXML
+    private void multiply(){
+      try{
+            a = Double.parseDouble(tf.getText());
+            operator = 3 ;
+            tf2.setText(prevStr+"*");
+            prevStr = tf2.getText();
           }catch(NumberFormatException e){
-              System.out.println("Enter value First");
-          }finally{
-              tf.setText("");
-          }
-          
-      }else if(event.getSource()==division){
-          try{
-              a = Double.parseDouble(tf.getText());
-              operator = 4 ;
-          }catch(NumberFormatException e){
-              System.out.println("Enter value First");
-          }finally{
-              tf.setText("");
-          }
-          
-      }else if(event.getSource()==equals){
-          try{
+            System.out.println("Enter value First");
+        }finally{
+             tf.setText("");
+        }
+    }
+    @FXML
+    private void clearText(){
+        tf.setText("");
+        tf2.setText("");
+        prevStr="";
+    }
+    
+    @FXML
+    private void divide(){
+         try{
+            a = Double.parseDouble(tf.getText());
+            operator = 4 ;
+            tf2.setText(prevStr+"/");
+            prevStr = tf2.getText();
+        }catch(NumberFormatException e){
+            System.out.println("Enter value First");
+        }finally{
+            tf.setText("");
+        }
+    }
+    
+    @FXML
+    private void equals(){
+    try{
               b = Double.parseDouble(tf.getText());
               
               switch(operator){
@@ -150,19 +156,19 @@ public class FXMLDocumentController implements Initializable {
               case 4 : try{
                         result = a/b ;
                         tf.setText(""+result);
+                        
                       }catch(Exception e){
                           tf.setText("Error");
                       }
             }
+             tf2.setText(prevStr+"="+result);
+             
                 
           
           }catch(NumberFormatException e){
               System.out.println("Select values First");
           }
-          
-      }
-    }
-    
+}
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
