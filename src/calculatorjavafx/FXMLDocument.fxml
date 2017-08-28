@@ -141,7 +141,7 @@
                   </LinearGradient>
                </textFill>
             </Button>
-            <Button fx:id="equals" layoutX="242.0" layoutY="178.0" mnemonicParsing="false" onAction="#equals" prefHeight="95.0" prefWidth="114.0" text="=" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="equals" layoutX="242.0" layoutY="178.0" mnemonicParsing="false" onAction="#equals" prefHeight="95.0" prefWidth="127.0" text="=" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="44.0" />
                </font>
@@ -180,7 +180,7 @@
                   </LinearGradient>
                </textFill>
             </Button>
-            <Button fx:id="plus" layoutX="242.0" layoutY="262.0" mnemonicParsing="false" onAction="#add" prefHeight="96.0" prefWidth="125.0" text="+" GridPane.columnIndex="3">
+            <Button fx:id="plus" layoutX="242.0" layoutY="262.0" mnemonicParsing="false" onAction="#add" prefHeight="95.0" prefWidth="127.0" text="+" GridPane.columnIndex="3">
                <font>
                   <Font size="44.0" />
                </font>
